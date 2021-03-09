@@ -9,8 +9,6 @@ public class Radio {
     private int currentVolume;
     private int minVolume = 0;
     private int maxVolume = 10;
-    private int volumeMinus;
-    private int volumePlus;
 
     public String getName() {
         return name;
@@ -115,7 +113,7 @@ public class Radio {
         if (currentVolume <= minVolume) {
             return minVolume;
         }
-        volumeMinus = setCurrentVolume(getCurrentVolume()) - 1;
+        int volumeMinus = setCurrentVolume(getCurrentVolume()) - 1;
         return volumeMinus;
     }
 
@@ -127,7 +125,7 @@ public class Radio {
         if (currentVolume <= minVolume) {
             return minVolume;
         }
-        volumePlus = setCurrentVolume(getCurrentVolume()) + 1;
+        int volumePlus = setCurrentVolume(getCurrentVolume()) + 1;
         return volumePlus;
     }
 }
