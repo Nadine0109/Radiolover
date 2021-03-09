@@ -6,8 +6,6 @@ public class Radio {
     private int minStation = 0;
     private int maxStation = 9;
     private int currentStation;
-    private int nextStation;
-    private int prevStation;
     private int currentVolume;
     private int minVolume = 0;
     private int maxVolume = 10;
@@ -65,7 +63,7 @@ public class Radio {
 
     public int getNextStation() {
 
-        nextStation = setCurrentStation(getCurrentStation()) + 1;
+        int nextStation = setCurrentStation(getCurrentStation()) + 1;
         if (nextStation > maxStation) {
             return minStation;
         }
@@ -74,7 +72,7 @@ public class Radio {
     }
 
     public int getPrevStation() {
-        prevStation = setCurrentStation(getCurrentStation()) - 1;
+        int prevStation = setCurrentStation(getCurrentStation()) - 1;
         if (currentStation == minStation) {
             return maxStation;
         }
@@ -115,11 +113,11 @@ public class Radio {
     public int getVolumeMinus() {
 
         if (currentVolume <= minVolume) {
-                return minVolume;
-            }
-        volumeMinus = setCurrentVolume(getCurrentVolume()) - 1;
-            return volumeMinus;
+            return minVolume;
         }
+        volumeMinus = setCurrentVolume(getCurrentVolume()) - 1;
+        return volumeMinus;
+    }
 
     public int getVolumePlus() {
 

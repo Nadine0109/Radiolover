@@ -38,6 +38,7 @@ class RadioTest {
         assertEquals(0, radio.getNextStation());
 
     }
+
     @Test
     void shouldGetNextStationAboveMax() {
         Radio radio = new Radio();
@@ -112,6 +113,7 @@ class RadioTest {
 
         assertEquals(8, radio.getVolumePlus());
     }
+
     @Test
     void shouldGetVolumePlusAboveMax() {
         Radio radio = new Radio();
@@ -119,6 +121,7 @@ class RadioTest {
 
         assertEquals(0, radio.getVolumePlus());
     }
+
     @Test
     void shouldGetVolumePlusMax() {
         Radio radio = new Radio();
