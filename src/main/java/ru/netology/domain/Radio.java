@@ -10,9 +10,24 @@ public class Radio {
     private int currentStation;
     private int currentVolume;
 
+    public Radio() {
+    }
+
+    public Radio(String name, boolean on, int minStation, int maxStation, int maxVolume, int minVolume, int currentStation, int currentVolume) {
+        this.name = name;
+        this.on = on;
+        this.minStation = minStation;
+        this.maxStation = maxStation;
+        this.maxVolume = maxVolume;
+        this.minVolume = minVolume;
+        this.currentStation = currentStation;
+        this.currentVolume = currentVolume;
+    }
+
     public boolean isOn() {
         return on;
     }
+
     public void setOn(boolean on) {
         this.on = on;
     }
